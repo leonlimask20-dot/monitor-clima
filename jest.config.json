@@ -1,0 +1,17 @@
+{
+  "testEnvironment": "jsdom",
+  "globalSetup": null,
+  "setupFiles": [],
+  "moduleNameMapper": {
+    "\\.(css|less|scss)$": "<rootDir>/src/tests/__mocks__/stiloMock.js"
+  },
+  "testMatch": [
+    "**/tests/**/*.test.js"
+  ],
+  "transform": {
+    "^.+\\.(js|jsx)$": "babel-jest"
+  },
+  "setupFilesAfterFramework": [
+    "<rootDir>/src/tests/setup.js"
+  ]
+}
