@@ -3,26 +3,26 @@
 ![CI](https://github.com/leonlimask20-dot/monitor-clima/actions/workflows/ci.yml/badge.svg)
 ![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?logo=bootstrap&logoColor=white)
-![Testes](https://img.shields.io/badge/testes-Jest%20+%20RTL-C21325?logo=jest&logoColor=white)
+![Tests](https://img.shields.io/badge/tests-Jest%20+%20RTL-C21325?logo=jest&logoColor=white)
 
-Monitor de clima para cidades brasileiras com dados em tempo real via Open-Meteo API.
-
----
-
-## Principais competências demonstradas
-
-- React 18 com Hooks — useState, useCallback, hook customizado
-- Bootstrap 5 — grid responsivo, cards, badges, spinner
-- Consumo de API externa — Open-Meteo (gratuita, sem cadastro)
-- Hook customizado — separação de lógica de negócio dos componentes
-- Testes com Jest e React Testing Library — componentes e serviços
-- Pipeline de CI com GitHub Actions
+Weather monitor for cities worldwide with real-time data via the Open-Meteo API.
 
 ---
 
-## Tecnologias
+## Key skills demonstrated
 
-| Tecnologia | Versão |
+- React 18 with Hooks — useState, useCallback, custom hook
+- Bootstrap 5 — responsive grid, cards, badges, spinner
+- External API consumption — Open-Meteo (free, no registration)
+- Custom hook — business logic separated from components
+- Testing with Jest and React Testing Library — components and services
+- CI pipeline with GitHub Actions
+
+---
+
+## Tech stack
+
+| Technology | Version |
 |---|---|
 | React | 18 |
 | Bootstrap | 5.3 |
@@ -33,48 +33,48 @@ Monitor de clima para cidades brasileiras com dados em tempo real via Open-Meteo
 
 ---
 
-## Funcionalidades
+## Features
 
-- Busca de qualquer cidade do mundo por nome
-- Temperatura atual, sensação térmica, umidade e velocidade do vento
-- Descrição do clima com ícone e cor por condição
-- Botões de acesso rápido para cidades brasileiras
-- Feedback visual de carregamento e erros
-- Prioriza resultados do Brasil na busca
+- Search any city in the world by name
+- Current temperature, feels-like, humidity and wind speed
+- Weather description with an icon and a color per condition
+- Quick-access buttons for major cities
+- Visual feedback for loading and errors
+- Prioritizes Brazilian results in the search
 
 ---
 
-## Arquitetura
+## Architecture
 
 ```
 src/
 ├── components/
-│   ├── BuscaCidade.jsx   ← formulário de busca com controlled input
-│   └── CartaoClima.jsx   ← card com dados climáticos
+│   ├── BuscaCidade.jsx   ← search form with a controlled input
+│   └── CartaoClima.jsx   ← card with weather data
 ├── hooks/
-│   └── useClima.js       ← hook customizado com useState e useCallback
+│   └── useClima.js       ← custom hook with useState and useCallback
 ├── services/
-│   └── climaApi.js       ← integração com Open-Meteo API
+│   └── climaApi.js       ← integration with the Open-Meteo API
 └── tests/
-    ├── climaApi.test.js  ← testes do serviço com fetch mockado
-    ├── CartaoClima.test.js ← testes do componente com RTL
-    └── BuscaCidade.test.js ← testes de interação do usuário
+    ├── climaApi.test.js    ← service tests with a mocked fetch
+    ├── CartaoClima.test.js  ← component tests with RTL
+    └── BuscaCidade.test.js  ← user interaction tests
 ```
 
 ---
 
-## Como executar
+## How to run
 
 ```bash
 npm install
 npm run dev
 ```
 
-Interface disponível em `http://localhost:5173`
+Interface available at `http://localhost:5173`
 
 ---
 
-## Testes
+## Tests
 
 ```bash
 npm test
@@ -82,17 +82,29 @@ npm test
 
 ---
 
-## API utilizada
+## API used
 
-[Open-Meteo](https://open-meteo.com) — gratuita, open source, sem cadastro.
+[Open-Meteo](https://open-meteo.com) — free, open source, no registration.
 
-Fluxo de chamadas:
-1. `GET geocoding-api.open-meteo.com/v1/search?name={cidade}` — busca coordenadas
-2. `GET api.open-meteo.com/v1/forecast?latitude=...&longitude=...` — busca clima
+Call flow:
+1. `GET geocoding-api.open-meteo.com/v1/search?name={city}` — fetch coordinates
+2. `GET api.open-meteo.com/v1/forecast?latitude=...&longitude=...` — fetch weather
 
 ---
 
-## Autor
+## 🤖 Agent Architecture
+
+This project was built and code-reviewed using a **multi-agent
+context-optimization workflow**: specialized AI agents each audit a single
+slice of the codebase — components, custom hooks, services, tests — within a
+strict context budget. The approach cuts review time and token cost while
+keeping full traceability of every finding.
+
+Methodology, agent templates and the full playbook: **[leonlim3.gumroad.com](https://leonlim3.gumroad.com)**
+
+---
+
+## Author
 
 **LNL**
 GitHub: [@leonlimask20-dot](https://github.com/leonlimask20-dot)
